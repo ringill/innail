@@ -9,6 +9,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace wapp
 {
+    public class Host
+    {
+        public string PathSegment { get; set; }
+    }
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -21,7 +26,14 @@ namespace wapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            var centralRoutePrefix = Configuration.GetSection("Host").Get<Host>().PathSegment;
+
+            services
+                .AddMvc(opt =>
+                    {
+                        opt.UseCentralRoutePrefix(new RouteAttribute(centralRoutePrefix));
+                    })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -51,7 +63,13 @@ namespace wapp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+
+            var centralRoutePrefix = Configuration.GetSection("Host").Get<Host>().PathSegment;
+            var spaStaticFileOptions = new StaticFileOptions
+            {
+                RequestPath = $"/{centralRoutePrefix}"
+            };
+            app.UseSpaStaticFiles(spaStaticFileOptions);
 
             app.UseMvc(routes =>
             {
