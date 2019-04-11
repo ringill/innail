@@ -1,6 +1,6 @@
 {
-  "short_name": "WebApp",
-  "name": "WebApp",
+  "short_name": "wapp",
+  "name": "wapp",
   "icons": [
     {
       "src": "favicon.ico",
