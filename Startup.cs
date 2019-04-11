@@ -64,12 +64,19 @@ namespace wapp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            var centralRoutePrefix = Configuration.GetSection("Host").Get<Host>().PathSegment;
-            var spaStaticFileOptions = new StaticFileOptions
+            if (!env.IsDevelopment())
             {
-                RequestPath = $"/{centralRoutePrefix}"
-            };
-            app.UseSpaStaticFiles(spaStaticFileOptions);
+                var centralRoutePrefix = Configuration.GetSection("Host").Get<Host>().PathSegment;
+                var spaStaticFileOptions = new StaticFileOptions
+                {
+                    RequestPath = $"/{centralRoutePrefix}"
+                };
+                app.UseSpaStaticFiles(spaStaticFileOptions);
+            }
+            else
+            {
+                app.UseSpaStaticFiles();
+            }
 
             app.UseMvc(routes =>
             {
