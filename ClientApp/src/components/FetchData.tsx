@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
+export class FetchData extends Component<any, any> {
   static displayName = FetchData.name;
 
   constructor (props) {

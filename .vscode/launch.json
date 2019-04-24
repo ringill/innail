@@ -12,6 +12,13 @@
             "webRoot": "${workspaceFolder}/ClientApp"
         },
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome:37362",
+            "url": "http://localhost:37362",
+            "webRoot": "${workspaceFolder}/ClientApp"
+        },
+        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
