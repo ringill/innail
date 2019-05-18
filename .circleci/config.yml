@@ -43,20 +43,20 @@ jobs:
           root: .
           paths:
             - build
-  # tu:
-  #   <<: *defaults
-  #   steps:
-  #     - checkout
-  #     - attach_workspace:
-  #         at: .
-  #     - run: yarn test
+  tu:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: yarn test
   # e2e:
   #   <<: *defaults
   #   steps:
   #     - checkout
   #     - attach_workspace:
   #         at: .
-  #     - run: yarn test
+  #     - run: yarn e2e
   # lint:
   #   <<: *defaults
   #   steps:
@@ -125,9 +125,9 @@ workflows:
       # - build:
       #     requires:
       #       - lint
-      # - tu:
-      #     requires:
-      #       - build
+      - tu:
+          requires:
+            - build
       # - e2e:
       #     requires:
       #       - build
