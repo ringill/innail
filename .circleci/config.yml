@@ -64,42 +64,46 @@ jobs:
   #     - attach_workspace:
   #         at: .
   #     - run: npm run lint
-  # deploy-github:
-  #   <<: *defaults
-  #   steps:
-  #     - checkout
-  #     - attach_workspace:
-  #         at: .
-  #     - deploy:
-  #         name: Deploy to GitHub Pages
-  #         command: |
-  #             set -e
-  #             remote=$(git config remote.origin.url)
-  #             if [ ! -d "build" ]
-  #             then
-  #                 echo "build folder not found"
-  #                 exit 1
-  #             fi
-  #             mkdir gh-pages-branch
-  #             cd gh-pages-branch
-  #             git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
-  #             git config --global user.name "$GH_NAME" > /dev/null 2>&1
-  #             git init
-  #             git remote add --fetch origin "$remote"
-  #             if git rev-parse --verify origin/gh-pages > /dev/null 2>&1
-  #             then
-  #                 git checkout gh-pages
-  #                 git rm -rf .
-  #             else
-  #                 git checkout --orphan gh-pages
-  #             fi
-  #             cp -a "../build/." .
-  #             git add -A
-  #             git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
-  #             git push --force --quiet origin gh-pages > /dev/null 2>&1
-  #             cd ..
-  #             rm -rf gh-pages-branch
-  #             echo "Finished GitHub pages Deployment!"
+  deploy-github-pages:
+    <<: *defaults
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "32:b3:45:c3:41:f5:83:88:ea:b2:8e:05:90:fa:f4:0b"
+      - checkout
+      - attach_workspace:
+          at: .
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: yarn run deploy-gh-pages
+          # command: |
+          #     set -e
+          #     remote=$(git config remote.origin.url)
+          #     if [ ! -d "build" ]
+          #     then
+          #         echo "build folder not found"
+          #         exit 1
+          #     fi
+          #     mkdir gh-pages-branch
+          #     cd gh-pages-branch
+          #     git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+          #     git config --global user.name "$GH_NAME" > /dev/null 2>&1
+          #     git init
+          #     git remote add --fetch origin "$remote"
+          #     if git rev-parse --verify origin/gh-pages > /dev/null 2>&1
+          #     then
+          #         git checkout gh-pages
+          #         git rm -rf .
+          #     else
+          #         git checkout --orphan gh-pages
+          #     fi
+          #     cp -a "../build/." .
+          #     git add -A
+          #     git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
+          #     git push --force --quiet origin gh-pages > /dev/null 2>&1
+          #     cd ..
+          #     rm -rf gh-pages-branch
+          #     echo "Finished GitHub pages Deployment!"
   # deploy-prod:
   #   <<: *defaults
   #   steps:
@@ -131,10 +135,10 @@ workflows:
       # - e2e:
       #     requires:
       #       - build
-      # - deploy-github:
-      #     requires:
-      #       - tu
-      #       - e2e
+      - deploy-github-pages:
+          requires:
+            - tu
+            #- e2e
       # - deploy-prod:
       #     type: approval
       #     requires:
