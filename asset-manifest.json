@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WebApp-ejected/static/css/main.19393e92.chunk.css",
-    "main.js": "/WebApp-ejected/static/js/main.edbac7a6.chunk.js",
-    "main.js.map": "/WebApp-ejected/static/js/main.edbac7a6.chunk.js.map",
+    "main.js": "/WebApp-ejected/static/js/main.4449f6cf.chunk.js",
+    "main.js.map": "/WebApp-ejected/static/js/main.4449f6cf.chunk.js.map",
     "runtime~main.js": "/WebApp-ejected/static/js/runtime~main.b978a7d7.js",
     "runtime~main.js.map": "/WebApp-ejected/static/js/runtime~main.b978a7d7.js.map",
     "static/js/2.b41502e9.chunk.js": "/WebApp-ejected/static/js/2.b41502e9.chunk.js",
     "static/js/2.b41502e9.chunk.js.map": "/WebApp-ejected/static/js/2.b41502e9.chunk.js.map",
     "index.html": "/WebApp-ejected/index.html",
-    "precache-manifest.5d72adf687bac98318100952190ca3dc.js": "/WebApp-ejected/precache-manifest.5d72adf687bac98318100952190ca3dc.js",
+    "precache-manifest.a21c89ebce325a78c1981d778daf34c5.js": "/WebApp-ejected/precache-manifest.a21c89ebce325a78c1981d778daf34c5.js",
     "service-worker.js": "/WebApp-ejected/service-worker.js",
     "static/css/main.19393e92.chunk.css.map": "/WebApp-ejected/static/css/main.19393e92.chunk.css.map",
     "static/media/logo.svg": "/WebApp-ejected/static/media/logo.5d5d9eef.svg"
