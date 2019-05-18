@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://http://innail.info",
   "dependencies": {
     "@types/jest": "24.0.13",
     "@types/node": "12.0.2",
