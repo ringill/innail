@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "//innail.info/static/css/main.19393e92.chunk.css",
-    "main.js": "//innail.info/static/js/main.3b84e904.chunk.js",
-    "main.js.map": "//innail.info/static/js/main.3b84e904.chunk.js.map",
-    "runtime~main.js": "//innail.info/static/js/runtime~main.9e3e40e4.js",
-    "runtime~main.js.map": "//innail.info/static/js/runtime~main.9e3e40e4.js.map",
-    "static/js/2.b41502e9.chunk.js": "//innail.info/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "//innail.info/static/js/2.b41502e9.chunk.js.map",
-    "index.html": "//innail.info/index.html",
-    "precache-manifest.ab1123f01b1781a4cbd89d4bac07fff9.js": "//innail.info/precache-manifest.ab1123f01b1781a4cbd89d4bac07fff9.js",
-    "service-worker.js": "//innail.info/service-worker.js",
-    "static/css/main.19393e92.chunk.css.map": "//innail.info/static/css/main.19393e92.chunk.css.map",
-    "static/media/logo.svg": "//innail.info/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.19393e92.chunk.css",
+    "main.js": "/static/js/main.c4fc4c31.chunk.js",
+    "main.js.map": "/static/js/main.c4fc4c31.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.b41502e9.chunk.js": "/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a44bad07948b4c2b382d474fb0b0452e.js": "/precache-manifest.a44bad07948b4c2b382d474fb0b0452e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.19393e92.chunk.css.map": "/static/css/main.19393e92.chunk.css.map",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   }
 }
