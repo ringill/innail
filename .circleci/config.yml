@@ -67,12 +67,17 @@ jobs:
   deploy-github-pages:
     <<: *defaults
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "32:b3:45:c3:41:f5:83:88:ea:b2:8e:05:90:fa:f4:0b"
       - checkout
       - attach_workspace:
           at: .
+      - run:
+          name: Install and configure dependencies
+          command: |
+            git config user.email "ringill@mail.ru"
+            git config user.name "ringill-ci-build"
+      - add_ssh_keys:
+          fingerprints:
+            - "32:b3:45:c3:41:f5:83:88:ea:b2:8e:05:90:fa:f4:0b"
       - deploy:
           name: Deploy to GitHub Pages
           command: yarn run deploy-gh-pages
