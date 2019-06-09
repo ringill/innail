@@ -3,10 +3,10 @@ import Gallery from "react-grid-gallery";
 import { imageNames } from "./imageNames";
 
 const IMAGES = imageNames.map(x => ({
-  src: x,
-  thumbnail: x,
-  thumbnailWidth: 320,
-  thumbnailHeight: 212,
+  src: x.src,
+  thumbnail: x.thumb,
+  thumbnailWidth: 200,
+  thumbnailHeight: 200,
   isSelected: false,
 }));
 
