@@ -43,5 +43,5 @@ const names = [
 
 export const imageNames: { src: string; thumb: string }[] = names.map(x => ({
   src: `/images/${x}`,
-  thumb: `/images/thumbnails/${x}`
+  thumb: `/images/thumb_${x}`
 }));
