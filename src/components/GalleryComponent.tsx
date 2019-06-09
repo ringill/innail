@@ -10,4 +10,4 @@ const IMAGES = imageNames.map(x => ({
   isSelected: false,
 }));
 
-export const GalleryComponent = () => <Gallery images={IMAGES} lazyLoad={true} showThumbnails={false} />;
+export const GalleryComponent = () => <Gallery images={IMAGES} lazyLoad={true} showThumbnails={false} enableImageSelection={false} />;
