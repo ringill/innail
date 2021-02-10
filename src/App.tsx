@@ -5,13 +5,13 @@ import { GalleryComponent } from "./components/GalleryComponent";
 import { Contacts } from './components/Contacts';
 import './App.css';
 
-const App: React.FC = () => {
-    return (
-      <Layout>
-          <Route exact path='/' component={GalleryComponent} />
-          <Route path='/contact' component={Contacts} />
-        </Layout>
-    );
+function App() {
+  return (
+    <Layout>
+      <Route exact path='/' component={GalleryComponent} />
+      <Route path='/contact' component={Contacts} />
+    </Layout>
+  );
 }
 
 export default App;
