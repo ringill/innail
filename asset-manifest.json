@@ -1,27 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.15f23738.chunk.css",
-    "main.js": "/static/js/main.4b54311c.chunk.js",
-    "main.js.map": "/static/js/main.4b54311c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.13cc218f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.13cc218f.js.map",
-    "static/css/2.658248ec.chunk.css": "/static/css/2.658248ec.chunk.css",
-    "static/js/2.6eacf5c2.chunk.js": "/static/js/2.6eacf5c2.chunk.js",
-    "static/js/2.6eacf5c2.chunk.js.map": "/static/js/2.6eacf5c2.chunk.js.map",
-    "static/js/3.67e7ecb5.chunk.js": "/static/js/3.67e7ecb5.chunk.js",
-    "static/js/3.67e7ecb5.chunk.js.map": "/static/js/3.67e7ecb5.chunk.js.map",
+    "main.css": "/static/css/main.d10e0c53.chunk.css",
+    "main.js": "/static/js/main.06e3a8f2.chunk.js",
+    "main.js.map": "/static/js/main.06e3a8f2.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.c0630583.chunk.js": "/static/js/2.c0630583.chunk.js",
+    "static/js/2.c0630583.chunk.js.map": "/static/js/2.c0630583.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.658248ec.chunk.css.map": "/static/css/2.658248ec.chunk.css.map",
-    "static/css/main.15f23738.chunk.css.map": "/static/css/main.15f23738.chunk.css.map",
-    "static/js/2.6eacf5c2.chunk.js.LICENSE.txt": "/static/js/2.6eacf5c2.chunk.js.LICENSE.txt",
-    "static/media/contacts.0e30681b.png": "/static/media/contacts.0e30681b.png",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.13cc218f.js",
-    "static/css/2.658248ec.chunk.css",
-    "static/js/2.6eacf5c2.chunk.js",
-    "static/css/main.15f23738.chunk.css",
-    "static/js/main.4b54311c.chunk.js"
-  ]
+    "precache-manifest.c69a4b82628f8be6c4aaca2697826c45.js": "/precache-manifest.c69a4b82628f8be6c4aaca2697826c45.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.d10e0c53.chunk.css.map": "/static/css/main.d10e0c53.chunk.css.map",
+    "static/media/contacts.png": "/static/media/contacts.713866e7.png",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+  }
 }
